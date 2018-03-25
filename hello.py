@@ -91,12 +91,12 @@ def addlikeordislike():
 				db.session.commit()
 				returnValue =  "{\"id\":\""+ x.id +"\",\"likes\":"+"\""+str(p)+"\"}"
 		
-			else:
-				if x.comments=="1":
-					item = Developer.query.filter_by(id=int(x.id)).first()
-					item.comments = item.comments + 1
-					db.session.commit()
-					returnValue = "{\"likes\":"+"\""+item.comments+"\"}"
+			# else:
+			# 	if x.comments=="1":
+			# 		item = Developer.query.filter_by(id=int(x.id)).first()
+			# 		item.comments = item.comments + 1
+			# 		db.session.commit()
+			# 		returnValue = "{\"likes\":"+"\""+item.comments+"\"}"
 
 	except:
 			print 'Exception Caught'
